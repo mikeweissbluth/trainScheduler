@@ -38,24 +38,26 @@ $("#add-train-btn").on("click", function(event) {
 
      console.log(trainName);
      console.log(destination);
+     console.log(trainTime);
+     console.log(frequency);
 });
 
- // Creates local "temporary" object for holding employee data
-//  var newEmp = {
-//    name: trainName,
-//    role: empRole,
-//    start: empStart,
-//    rate: empRate
-//  };
+ // Creates local "temporary" object for holding train data
+  var chooChoo = {
+    name: trainName,
+    role: destination,
+   start: trainTime,
+    rate: frequency
+  };
 
-//  // Uploads employee data to the database
-//  database.ref().push(newEmp);
+//  // Uploads trainSchedule data to the database
+database.ref().push(chooChoo);
 
 //  // Logs everything to console
-//  console.log(newEmp.name);
-//  console.log(newEmp.role);
-//  console.log(newEmp.start);
-//  console.log(newEmp.rate);
+  console.log(chooChoo.name);
+  console.log(chooChoo.role);
+  console.log(chooChoo.start);
+  console.log(chooChoo.rate);
 
 
 
