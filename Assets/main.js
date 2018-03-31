@@ -24,11 +24,11 @@ let trainTime = "";
 let frequency = "";
 
 // 2. Button for adding Employees
-$("#add-train-btn").on("click", function(event) {
+$("#add-Train-btn").on("click", function(event) {
   //dont refresh the page
     event.preventDefault();
 
-  console.log("hello");
+  
 
     // Grabs user input
      trainName = $("#train-name-input").val().trim();
@@ -42,22 +42,22 @@ $("#add-train-btn").on("click", function(event) {
      console.log(frequency);
 });
 
- // Creates local "temporary" object for holding train data
-  var chooChoo = {
-    name: trainName,
-    role: destination,
-   start: trainTime,
-    rate: frequency
-  };
+//  // Creates local "temporary" object for holding train data
+//   var chooChoo = {
+//     trainName: trainName,
+//     destination: destination,
+//     trainTime: trainTime,
+//     frequency: frequency
+//   };
 
-//  // Uploads trainSchedule data to the database
-database.ref().push(chooChoo);
+// //  // Uploads trainSchedule data to the database
+// database.ref().push(chooChoo);
 
-//  // Logs everything to console
-  console.log(chooChoo.name);
-  console.log(chooChoo.role);
-  console.log(chooChoo.start);
-  console.log(chooChoo.rate);
+// //  // Logs everything to console
+//  // console.log(trainName);
+// //   console.log(destination);
+// //   console.log(trainTime);
+// //   console.log(frequency);
 
 
 
