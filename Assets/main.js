@@ -25,14 +25,40 @@ let frequency = "";
 
 // 2. Button for adding Employees
 $("#add-train-btn").on("click", function(event) {
+  //dont refresh the page
     event.preventDefault();
 
   console.log("hello");
 
     // Grabs user input
-    var trainName = $("#train-name-input").val().trim();
-    var empRole = $("#role-input").val().trim();
-    var empStart = moment($("#start-input").val().trim(), "DD/MM/YY").format("X");
-    var empRate = $("#rate-input").val().trim();
-})
+     trainName = $("#train-name-input").val().trim();
+     destination = $("#destination-input").val().trim();
+     trainTime = $("#trainTime-input").val().trim();
+     frequency = $("#freq-input").val().trim();
+
+     console.log(trainName);
+     console.log(destination);
+});
+
+ // Creates local "temporary" object for holding employee data
+//  var newEmp = {
+//    name: trainName,
+//    role: empRole,
+//    start: empStart,
+//    rate: empRate
+//  };
+
+//  // Uploads employee data to the database
+//  database.ref().push(newEmp);
+
+//  // Logs everything to console
+//  console.log(newEmp.name);
+//  console.log(newEmp.role);
+//  console.log(newEmp.start);
+//  console.log(newEmp.rate);
+
+
+
+
+
  });
